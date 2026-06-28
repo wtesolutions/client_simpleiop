@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 Annual Stewardship Drive — SimplyIOP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="dashboard.html" class="logo">Simply<span class="logo-badge">IOP</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    <nav class="main-nav">
+      <a href="dashboard.html" class="nav-icon">&#127968;</a>
+      <a href="dashboard.html">Campaigns</a>
+      <a href="wizard.html">New Campaign</a>
+      <a href="campaign-detail.html">Active Drive</a>
+      <a href="#">Reports</a>
+    </nav>
+    <div class="header-actions">
+      <div class="avatar-dropdown"><div class="avatar">GC</div> &#9662;</div>
+      <a href="login.html"><button class="btn-logout">Log Out</button></a>
+    </div>
+  </div>
+</header>
+
+<section class="welcome-strip">
+  <h1>2026 Annual Stewardship Drive</h1>
+  <span class="status-badge"><span class="status-dot">&#9679;</span> Active — Week 2 of 4</span>
+</section>
+
+<nav class="tab-bar">
+  <button class="tab-btn active" data-tab="overview">Overview</button>
+  <button class="tab-btn" data-tab="letters">Letters</button>
+  <button class="tab-btn" data-tab="members">Member List</button>
+  <button class="tab-btn" data-tab="responses">Responses</button>
+  <button class="tab-btn" data-tab="schedule">Schedule</button>
+  <button class="tab-btn" data-tab="reports">Reports</button>
+  <button class="tab-btn" data-tab="payments">Payments</button>
+  <button class="tab-btn" data-tab="settings">Settings</button>
+</nav>
+
+<div class="page-content">
+  <!-- Overview -->
+  <div class="tab-panel active" id="tab-overview">
+    <div class="two-col">
+      <div>
+        <div class="card">
+          <h2 style="margin-bottom:16px;">Week Summary</h2>
+          <table class="data-table">
+            <thead>
+              <tr><th>Week</th><th>Mailed</th><th>Suppressed</th><th>Responded</th><th class="right">Pledged</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Week 1</td><td>847</td><td>0</td><td>61</td><td class="amount">$18,200</td></tr>
+              <tr><td>Week 2</td><td>786</td><td>61</td><td>33</td><td class="amount">$12,950</td></tr>
+              <tr><td>Week 3</td><td>753</td><td>94</td><td><em>(pending)</em></td><td>—</td></tr>
+              <tr><td>Week 4</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+          <div class="chart-placeholder">Bar chart — cumulative pledge growth by week</div>
+        </div>
+      </div>
+      <div>
+        <div class="reminder-card urgent">
+          <h3>Monday 11:59 PM Deadline</h3>
+          <p>Enter this week's responses before Tuesday mailing.</p>
+          <p class="countdown" data-countdown="2026-06-30T23:59:00">31 hours 14 minutes remaining</p>
+          <a href="#" class="btn btn-primary full-width" style="margin-top:12px;" onclick="document.querySelector('[data-tab=responses]').click(); return false;">Enter Responses</a>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:16px;">Campaign Health</h3>
+          <div class="health-metrics">
+            <div class="health-metric"><div class="value">5.1%</div><div class="label">Response Rate</div></div>
+            <div class="health-metric"><div class="value">78%</div><div class="label">Goal Progress</div></div>
+            <div class="health-metric"><div class="value">753</div><div class="label">Letters Queued</div></div>
+          </div>
+          <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px; text-align:center;">Goal: $60,000 &bull; Pledged: $47,200</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Letters -->
+  <div class="tab-panel" id="tab-letters">
+    <div class="card">
+      <h2 style="margin-bottom:16px;">Letter Previews — Group &times; Week</h2>
+      <div class="letter-grid">
+        <div class="letter-thumb"><div class="letter-preview-box">Week 1</div><div class="letter-thumb-label">Major — Wk 1</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">Week 2</div><div class="letter-thumb-label">Major — Wk 2</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">Week 1</div><div class="letter-thumb-label">Regular — Wk 1</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">Week 2</div><div class="letter-thumb-label">Regular — Wk 2</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">Week 1</div><div class="letter-thumb-label">Lapsed — Wk 1</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">Week 3</div><div class="letter-thumb-label">Regular — Wk 3</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Members -->
+  <div class="tab-panel" id="tab-members">
+    <div class="card">
+      <div class="filter-bar">
+        <input type="search" placeholder="Search members...">
+        <select><option>All Groups</option><option>Major Donors</option><option>Regular Donors</option><option>Excused / Lapsed</option></select>
+        <select><option>Responded: All</option><option>Yes</option><option>No</option></select>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Name</th><th>Group</th><th>Email</th><th>Last Gift</th><th class="right">Pledge $</th><th>Responded</th><th>Suppress</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Smith, John</td><td>Major</td><td>j@email.com</td><td>$2,400</td><td class="amount">$2,760</td><td><span class="badge badge-success">&#10003;</span></td><td>—</td></tr>
+          <tr><td>Jones, Mary</td><td>Regular</td><td>m@email.com</td><td>$480</td><td class="amount">$552</td><td>—</td><td><input type="checkbox"></td></tr>
+          <tr><td>Williams, Robert</td><td>Major</td><td>r@email.com</td><td>$3,100</td><td class="amount">$3,565</td><td><span class="badge badge-success">&#10003;</span></td><td>—</td></tr>
+          <tr><td>Davis, Susan</td><td>Regular</td><td>s@email.com</td><td>$220</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr><td>Miller, James</td><td>Lapsed</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+      <button class="btn btn-outline btn-sm" style="margin-top:16px;">Export CSV</button>
+      <div class="upsell-row">&#128241; Add Mobile Scanner App — log mailed pledge cards with your phone. $99. <a href="#" class="add-now-btn" data-addon="scanner">Add Now &rarr;</a></div>
+    </div>
+  </div>
+
+  <!-- Responses -->
+  <div class="tab-panel" id="tab-responses">
+    <div class="card">
+      <p style="margin-bottom:16px;"><span class="badge badge-success">14 online pledges — $6,840 processed via pledge link</span></p>
+      <table class="data-table">
+        <thead><tr><th>Date</th><th>Member</th><th>Group</th><th class="right">Pledge $</th><th>Channel</th></tr></thead>
+        <tbody>
+          <tr><td>Jun 15, 2026</td><td>Smith, John</td><td>Major</td><td class="amount">$2,760</td><td>Online</td></tr>
+          <tr><td>Jun 14, 2026</td><td>Williams, Robert</td><td>Major</td><td class="amount">$3,565</td><td>Mail</td></tr>
+          <tr><td>Jun 13, 2026</td><td>Brown, Linda</td><td>Regular</td><td class="amount">$575</td><td>Online</td></tr>
+          <tr><td>Jun 12, 2026</td><td>Taylor, David</td><td>Regular</td><td class="amount">$460</td><td>Phone</td></tr>
+          <tr><td>Jun 10, 2026</td><td>Anderson, Karen</td><td>Major</td><td class="amount">$1,840</td><td>Check</td></tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary btn-sm" style="margin-top:16px;">+ Log Manual Response</button>
+    </div>
+  </div>
+
+  <!-- Schedule -->
+  <div class="tab-panel" id="tab-schedule">
+    <div class="card">
+      <div class="timeline">
+        <div class="timeline-step complete"><div class="step-label">Week 1 &#10003;</div><div class="step-detail">847 mailed<br>Sent to printer &#10003;</div></div>
+        <div class="timeline-step complete"><div class="step-label">Week 2 &#10003;</div><div class="step-detail">786 mailed<br>Sent to printer &#10003;</div></div>
+        <div class="timeline-step current"><div class="step-label">Week 3 (current)</div><div class="step-detail">753 queued<br>Print pending</div></div>
+        <div class="timeline-step"><div class="step-label">Week 4</div><div class="step-detail">Scheduled Jul 6</div></div>
+        <div class="timeline-step"><div class="step-label">Thank-You</div><div class="step-detail">Auto after close</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reports -->
+  <div class="tab-panel" id="tab-reports">
+    <div class="card">
+      <h2 style="margin-bottom:16px;">Campaign Reports</h2>
+      <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Download Week 1 Report PDF</a></p>
+      <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Download Week 2 Report PDF</a></p>
+      <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Export Full Member List CSV</a></p>
+      <p style="color:var(--color-text-muted); font-size:0.875rem; margin-top:20px;">Final Report: Available at campaign completion (Week 4 + 7 days)</p>
+    </div>
+  </div>
+
+  <!-- Payments -->
+  <div class="tab-panel" id="tab-payments">
+    <div class="card">
+      <table class="data-table">
+        <thead><tr><th>Invoice</th><th>Date</th><th class="right">Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Setup Fee (50% upfront)</td><td>Jun 1, 2026</td><td class="amount">$3,637.50</td><td><span class="badge badge-success">Paid &#10003;</span></td></tr>
+          <tr><td>Week 1 Print Production</td><td>Jun 8, 2026</td><td class="amount">$1,482.25</td><td><span class="badge badge-success">Paid &#10003;</span></td></tr>
+          <tr><td>Week 2 Print Production</td><td>Jun 15, 2026</td><td class="amount">$1,375.50</td><td><span class="badge badge-warning">Due Jul 1</span></td></tr>
+        </tbody>
+      </table>
+      <p style="margin:20px 0 12px; font-size:0.9375rem;"><strong>Online Donations (Stripe):</strong> $6,840 processed — $171.00 platform fee collected</p>
+      <a href="pledge.html" class="btn btn-outline btn-sm" style="margin-right:8px;">View Pledge Page</a>
+      <button class="btn btn-primary btn-sm">Pay Remaining Balance</button>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="tab-panel" id="tab-settings">
+    <div class="card">
+      <h2 style="margin-bottom:16px;">Campaign Settings</h2>
+      <div class="form-group"><label class="form-label">Campaign Name</label><input class="form-input" value="2026 Annual Stewardship Drive"></div>
+      <div class="form-group"><label class="form-label">Goal Amount</label><input class="form-input" value="$60,000"></div>
+      <div class="form-group"><label class="form-label">Pledge Link</label><input class="form-input" value="https://simplyiop.com/pledge/grace-community-2026" readonly></div>
+      <button class="btn btn-primary btn-sm">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close">&times;</button>
+    <h2 id="modal-title">Add-On</h2>
+    <p id="modal-body"></p>
+    <button class="btn btn-primary" onclick="document.getElementById('modal-overlay').classList.remove('open')">Add to Campaign</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="letter-modal">
+  <div class="modal" style="max-width:640px;">
+    <button class="modal-close">&times;</button>
+    <h2 id="letter-modal-title">Letter Preview</h2>
+    <div style="background:var(--color-bg-light); padding:24px; border-radius:4px; font-size:0.9375rem; line-height:1.8; margin-top:16px;">
+      <p>Dear Mr. Smith,</p>
+      <p>As a faithful steward of Grace Community Church, your generosity of $2,400 last year made a lasting impact. This year, we invite you to consider a pledge of $2,760 to support our 2026 Annual Stewardship Drive.</p>
+      <p>Make your pledge online: <a href="pledge.html">simplyiop.com/pledge/grace-community</a></p>
+      <p>With gratitude,<br>Rev. Michael Thompson</p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

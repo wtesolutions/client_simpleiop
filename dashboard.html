@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Grace Community Church — SimplyIOP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="dashboard.html" class="logo">Simply<span class="logo-badge">IOP</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    <nav class="main-nav">
+      <a href="dashboard.html" class="nav-icon">&#127968;</a>
+      <a href="dashboard.html">Campaigns</a>
+      <a href="wizard.html">New Campaign</a>
+      <a href="campaign-detail.html">Active Drive</a>
+      <a href="#">Reports</a>
+      <a href="#">Documents</a>
+      <a href="#">Settings</a>
+    </nav>
+    <div class="header-actions">
+      <div class="avatar-dropdown"><div class="avatar">GC</div> &#9662;</div>
+      <a href="login.html"><button class="btn-logout">Log Out</button></a>
+    </div>
+  </div>
+</header>
+
+<section class="welcome-strip">
+  <h1>Welcome, Grace Community Church</h1>
+  <p class="role-badge">Administrator &mdash; Jennifer Wilson</p>
+</section>
+
+<div class="page-content">
+  <div class="two-col">
+    <div>
+      <div class="card">
+        <div class="table-total">
+          Total Campaign Value (all active pledges): <strong class="amount" style="float:right;">$47,200.00</strong>
+        </div>
+        <div class="card-header">
+          <h2>My Campaigns</h2>
+          <a href="campaign-detail.html" class="card-link">Go to Campaigns &rsaquo;</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Account</th>
+              <th class="right">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="clickable" onclick="location.href='campaign-detail.html'">
+              <td>
+                <a href="campaign-detail.html" class="account-link">&#9998; [IOP] 2026 Annual Stewardship</a>
+                <div class="account-sub">Growth &bull; ****5524</div>
+              </td>
+              <td class="amount">$34,151.30</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#" class="account-link">&#9998; [IOP] Capital Building Fund</a>
+                <div class="account-sub">Starter &bull; ****0502</div>
+              </td>
+              <td class="amount">$8,316.71</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="wizard.html" class="account-link">&#9998; [IOP] Youth Wing Campaign</a>
+                <div class="account-sub">Setup &bull; ****0439 &nbsp;<span class="badge badge-draft">draft</span></div>
+              </td>
+              <td class="amount">$4,731.99</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="table-actions">
+          <a href="#" style="font-size:0.875rem;">Show More &#9662;</a>
+          <button class="btn btn-outline btn-sm">&#128203; Edit Campaign Order</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Pledge Totals Over Time — All Campaigns</h2>
+          <a href="#" class="card-link">&#8599; Expand</a>
+        </div>
+        <div class="chart-placeholder">Line chart — cumulative pledge growth</div>
+      </div>
+
+      <a href="wizard.html" class="btn btn-outline" style="margin-top:8px;">+ Add New Campaign</a>
+    </div>
+
+    <div>
+      <div class="reminder-card">
+        <div class="reminder-header">
+          <div class="reminder-icon">&#9201;</div>
+          <div>
+            <h3>Monday Deadline Approaching</h3>
+            <p>Ensure this week's responses are entered before 11:59 PM Monday to protect Tuesday's mailing schedule.</p>
+            <p class="countdown" data-countdown="2026-06-30T23:59:00">31 hours 14 minutes remaining</p>
+          </div>
+        </div>
+        <a href="campaign-detail.html#responses" class="btn btn-primary full-width">Enter Responses Now</a>
+      </div>
+
+      <div class="promo-card">
+        <h3>Upgrade to Growth Plan</h3>
+        <p style="font-size:0.8125rem; margin-bottom:4px;">Powered by <strong>Stripe</strong></p>
+        <p>Unlock email + SMS channels, 5 donor groups, and weekly auto-reports.</p>
+        <a href="#" class="add-now-btn" data-addon="upgrade">Learn More &amp; Upgrade &#8599;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close">&times;</button>
+    <h2 id="modal-title">Upgrade</h2>
+    <p id="modal-body"></p>
+    <button class="btn btn-primary" onclick="document.getElementById('modal-overlay').classList.remove('open')">Got It</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Campaign Setup — SimplyIOP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="dashboard.html" class="logo">Simply<span class="logo-badge">IOP</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    <nav class="main-nav">
+      <a href="dashboard.html" class="nav-icon">&#127968;</a>
+      <a href="dashboard.html">Campaigns</a>
+      <a href="wizard.html">New Campaign</a>
+      <a href="campaign-detail.html">Active Drive</a>
+    </nav>
+    <div class="header-actions">
+      <div class="avatar-dropdown"><div class="avatar">GC</div> &#9662;</div>
+      <a href="login.html"><button class="btn-logout">Log Out</button></a>
+    </div>
+  </div>
+</header>
+
+<section class="welcome-strip">
+  <h1>New Campaign Setup</h1>
+</section>
+
+<div class="page-content">
+  <div class="wizard-container card">
+    <div class="wizard-progress">
+      <div class="wizard-step"><div class="wizard-dot current"></div><span class="wizard-step-label active">Basics</span></div>
+      <div class="wizard-step"><div class="wizard-dot"></div><span class="wizard-step-label">Import</span></div>
+      <div class="wizard-step"><div class="wizard-dot"></div><span class="wizard-step-label">Groups</span></div>
+      <div class="wizard-step"><div class="wizard-dot"></div><span class="wizard-step-label">Letters</span></div>
+      <div class="wizard-step"><div class="wizard-dot"></div><span class="wizard-step-label">Channels</span></div>
+      <div class="wizard-step"><div class="wizard-dot"></div><span class="wizard-step-label">Review</span></div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="wizard-panel active">
+      <h2 style="font-size:1.25rem; margin-bottom:24px;">Step 1 — Campaign Basics</h2>
+      <div class="form-group">
+        <label class="form-label" for="camp-name">Campaign Name</label>
+        <input class="form-input" id="camp-name" type="text" value="2026 Annual Stewardship Drive">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="org-name">Organization Name</label>
+        <input class="form-input" id="org-name" type="text" value="Grace Community Church">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="camp-type">Campaign Type</label>
+        <select class="form-select" id="camp-type">
+          <option selected>Annual Stewardship</option>
+          <option>Capital Campaign</option>
+          <option>Debt Retirement</option>
+          <option>Building Fund</option>
+          <option>Special Project</option>
+        </select>
+      </div>
+      <p style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:8px;">Campaign Duration</p>
+      <div class="radio-group">
+        <label><input type="radio" name="duration"> 3 weeks</label>
+        <label><input type="radio" name="duration" checked> 4 weeks</label>
+        <label><input type="radio" name="duration"> 5 weeks</label>
+        <label><input type="radio" name="duration"> 6 weeks</label>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="start-date">Start Date</label>
+        <input class="form-input" id="start-date" type="date" value="2026-06-01">
+      </div>
+      <div class="toggle-row">
+        <span>Include Final Thank-You Letter</span>
+        <div class="toggle-switch on"></div>
+      </div>
+      <p style="font-size:0.875rem; margin:16px 0 8px;">Upload Logo</p>
+      <div class="drop-zone"><div class="drop-zone-icon">&#128194;</div>Drag &amp; drop logo here or click to browse</div>
+      <p style="font-size:0.875rem; margin:16px 0 8px;">Upload Signature Image</p>
+      <div class="drop-zone"><div class="drop-zone-icon">&#9999;</div>Drag &amp; drop signature image</div>
+      <div class="wizard-actions">
+        <span></span>
+        <button class="btn btn-primary wizard-next">Save &amp; Continue &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="wizard-panel">
+      <h2 style="font-size:1.25rem; margin-bottom:24px;">Step 2 — Member Import</h2>
+      <div style="display:flex; gap:8px; margin-bottom:20px;">
+        <button class="btn btn-primary btn-sm">Bulk Upload CSV</button>
+        <button class="btn btn-outline btn-sm">Manual Entry</button>
+      </div>
+      <div class="drop-zone"><div class="drop-zone-icon">&#128196;</div>Drop CSV file here<br><small>847 members max on Growth plan</small></div>
+      <p style="font-size:0.875rem; margin-bottom:16px;"><a href="#">Download CSV Template</a></p>
+      <table class="data-table" style="font-size:0.875rem;">
+        <thead><tr><th>CSV Column</th><th>Maps To</th><th>Sample</th></tr></thead>
+        <tbody>
+          <tr><td>FirstName</td><td>First Name</td><td>John</td></tr>
+          <tr><td>LastName</td><td>Last Name</td><td>Smith</td></tr>
+          <tr><td>Email</td><td>Email Address</td><td>j@email.com</td></tr>
+          <tr><td>AnnualGift</td><td>Last Gift Amount</td><td>$2,400</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;"><span class="badge badge-success">847 members imported</span></p>
+      <div class="upsell-gold">Tip: Include the Email and Cell Phone columns to unlock digital channels in Step 5 — costs nothing extra to import now.</div>
+      <div class="wizard-actions">
+        <button class="btn btn-outline wizard-back">&larr; Back</button>
+        <button class="btn btn-primary wizard-next">Save &amp; Continue &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="wizard-panel">
+      <h2 style="font-size:1.25rem; margin-bottom:24px;">Step 3 — Donor Groups</h2>
+      <div class="form-group">
+        <label class="form-label" for="num-groups">How many groups?</label>
+        <select class="form-select" id="num-groups">
+          <option>1</option><option>2</option><option selected>3</option>
+          <option>4</option><option>5</option><option>6</option>
+        </select>
+      </div>
+      <div class="card" style="box-shadow:none; border:1px solid var(--color-border); margin-bottom:12px;">
+        <strong>Group 1: Major Donors</strong> <span style="color:var(--color-gold);">&#9679;</span>
+        <p class="account-sub">Assignment: Annual Donation &gt; $1,000 &mdash; 142 members</p>
+      </div>
+      <div class="card" style="box-shadow:none; border:1px solid var(--color-border); margin-bottom:12px;">
+        <strong>Group 2: Regular Donors</strong> <span style="color:var(--color-navy);">&#9679;</span>
+        <p class="account-sub">Assignment: $100–$999 &mdash; 612 members</p>
+      </div>
+      <div class="card" style="box-shadow:none; border:1px solid var(--color-border); margin-bottom:12px;">
+        <strong>Group 3: Excused / Lapsed</strong> <span style="color:#94a3b8;">&#9679;</span>
+        <p class="account-sub">Assignment: No gift in 12+ months &mdash; 93 members</p>
+      </div>
+      <div class="donut-placeholder"></div>
+      <p style="text-align:center; font-size:0.8125rem; color:var(--color-text-muted);">Member distribution by group</p>
+      <div class="upsell-gold">
+        Add a "Leadership Givers" group (Group 0) — our pre-campaign quiet phase template gets your largest donors to commit first.
+        <a href="#" class="add-now-btn" data-addon="leadership">Available on Growth plan &rarr;</a>
+      </div>
+      <div class="wizard-actions">
+        <button class="btn btn-outline wizard-back">&larr; Back</button>
+        <button class="btn btn-primary wizard-next">Save &amp; Continue &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="wizard-panel">
+      <h2 style="font-size:1.25rem; margin-bottom:24px;">Step 4 — Letter Creation</h2>
+      <table class="data-table matrix-table" style="margin-bottom:20px;">
+        <thead><tr><th>Group</th><th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th></tr></thead>
+        <tbody>
+          <tr><td>Major Donors</td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox"></td></tr>
+          <tr><td>Regular Donors</td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td><td><input type="checkbox" checked></td></tr>
+          <tr><td>Excused / Lapsed</td><td><input type="checkbox" checked></td><td><input type="checkbox"></td><td><input type="checkbox" checked></td><td><input type="checkbox"></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.875rem; margin-bottom:8px;">Merge Fields — click to insert:</p>
+      <div class="merge-fields">
+        <span class="merge-field">{{FirstName}}</span>
+        <span class="merge-field">{{LastName}}</span>
+        <span class="merge-field">{{Salutation}}</span>
+        <span class="merge-field">{{LastGiftAmount}}</span>
+        <span class="merge-field">{{AskAmount}}</span>
+        <span class="merge-field">{{PledgeLink}}</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="letter-body">Letter — Major Donors, Week 1</label>
+        <textarea class="form-textarea" id="letter-body">Dear {{Salutation}},
+
+As a faithful steward of Grace Community Church, your generosity of {{LastGiftAmount}} last year made a lasting impact. This year, we invite you to consider a pledge of {{AskAmount}} to support our 2026 Annual Stewardship Drive.
+
+Make your pledge online: {{PledgeLink}}
+
+With gratitude,
+Rev. Michael Thompson</textarea>
+      </div>
+      <p style="font-size:0.875rem; margin-bottom:16px;">Ask = Annual Donation &times; <strong>1.15</strong> &#9998;</p>
+      <button class="btn btn-outline btn-sm" style="margin-bottom:16px;">Preview Letter</button>
+      <div class="upsell-gold">
+        Upgrade to full-color printing — $0.45 more per piece, up to 35% higher response rate.
+        <a href="#" class="add-now-btn" data-addon="fullcolor">Add Full-Color &rarr;</a>
+      </div>
+      <div class="wizard-actions">
+        <button class="btn btn-outline wizard-back">&larr; Back</button>
+        <button class="btn btn-primary wizard-next">Save &amp; Continue &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="wizard-panel">
+      <h2 style="font-size:1.25rem; margin-bottom:24px;">Step 5 — Delivery Channels</h2>
+      <div class="toggle-row"><span><strong>Print Mail</strong> (required)</span><div class="toggle-switch on" style="opacity:0.6;"></div></div>
+      <div class="toggle-row"><span>Email</span><div class="toggle-switch on"></div></div>
+      <div class="toggle-row"><span>SMS</span><div class="toggle-switch on"></div></div>
+      <div class="upsell-highlight">
+        &#128241; <strong>Digital Bundle (Email + SMS)</strong> — Add for $149 and see up to 28% higher response rates when combined with print.
+        <a href="#" class="add-now-btn" data-addon="digital">Add Digital Bundle</a>
+      </div>
+      <p style="font-weight:700; margin:20px 0 12px;">Promotional Materials</p>
+      <label class="form-checkbox"><input type="checkbox"> In-pew pledge envelopes — 500 for $199, 1,000 for $349</label>
+      <label class="form-checkbox"><input type="checkbox"> Campaign posters (8.5&times;11) — $49 / set of 10</label>
+      <label class="form-checkbox"><input type="checkbox"> Pre-campaign teaser postcard — $0.65/piece</label>
+      <div class="wizard-actions">
+        <button class="btn btn-outline wizard-back">&larr; Back</button>
+        <button class="btn btn-primary wizard-next">Save &amp; Continue &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="wizard-panel">
+      <h2 style="font-size:1.25rem; margin-bottom:24px;">Step 6 — Review &amp; Pay</h2>
+      <table class="data-table">
+        <tbody>
+          <tr><td>Campaign Setup Fee (Growth)</td><td class="amount">$999.00</td></tr>
+          <tr><td>Est. Print Production (847 &times; 4 &times; $1.75)</td><td class="amount">$5,928.00</td></tr>
+          <tr><td>Digital Bundle</td><td class="amount">$149.00</td></tr>
+          <tr><td>In-pew Envelopes (500)</td><td class="amount">$199.00</td></tr>
+          <tr style="border-top:2px solid var(--color-border);"><td><strong>Subtotal</strong></td><td class="amount"><strong>$7,275.00</strong></td></tr>
+          <tr><td><strong>50% Due Today</strong></td><td class="amount" style="color:var(--color-blue-btn);"><strong>$3,637.50</strong></td></tr>
+          <tr><td>Remaining Due at Completion</td><td class="amount">$3,637.50</td></tr>
+        </tbody>
+      </table>
+      <p style="font-weight:700; margin:20px 0 8px;">Payment</p>
+      <div class="stripe-element"><label>Card number</label><input class="form-input" style="padding:12px;" placeholder="4242 4242 4242 4242"></div>
+      <div class="form-row">
+        <div class="stripe-element"><label>Exp</label><input class="form-input" style="padding:12px;" placeholder="MM/YY"></div>
+        <div class="stripe-element"><label>CVV</label><input class="form-input" style="padding:12px;" placeholder="123"></div>
+      </div>
+      <p style="font-size:0.875rem; margin-bottom:12px;"><a href="#">Pay via Bank (ACH) instead</a> — recommended for $1,000+</p>
+      <div class="notice"><span>&#9888;</span><span><strong>No mailings will be produced until payment clears. No exceptions.</strong></span></div>
+      <label class="form-checkbox"><input type="checkbox"> I agree to the SimplyIOP Terms of Service and campaign production agreement</label>
+      <div class="wizard-actions">
+        <button class="btn btn-outline wizard-back">&larr; Back</button>
+        <a href="campaign-detail.html" class="btn btn-primary">Submit Campaign &amp; Pay &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close">&times;</button>
+    <h2 id="modal-title">Add-On</h2>
+    <p id="modal-body"></p>
+    <button class="btn btn-primary" onclick="document.getElementById('modal-overlay').classList.remove('open')">Add to Campaign</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

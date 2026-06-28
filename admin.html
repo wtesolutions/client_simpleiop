@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — SimplyIOP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="admin.html" class="logo">Simply<span class="logo-badge">IOP</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    <nav class="main-nav">
+      <a href="admin.html" class="nav-icon">&#127968;</a>
+      <a href="admin.html">Organizations</a>
+      <a href="#">Billing</a>
+      <a href="#">Reports</a>
+      <a href="#">Sales Pipeline</a>
+      <a href="#">Settings</a>
+    </nav>
+    <div class="header-actions">
+      <div class="avatar-dropdown"><div class="avatar">SA</div> SimplyIOP Admin &#9662;</div>
+      <a href="login.html"><button class="btn-logout">Log Out</button></a>
+    </div>
+  </div>
+</header>
+
+<section class="welcome-strip">
+  <h1>Welcome, Admin Dashboard</h1>
+  <p class="role-badge">Global Administrator</p>
+</section>
+
+<div class="page-content">
+  <label class="form-checkbox" style="margin-bottom:20px;">
+    <input type="checkbox"> My Accounts Only (salesperson view)
+  </label>
+
+  <div class="two-col">
+    <div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Organizations</h2>
+          <a href="#" class="card-link">Export CSV &rsaquo;</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Organization</th>
+              <th>Contact</th>
+              <th>Plan</th>
+              <th>Campaigns</th>
+              <th class="right">YTD Revenue</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="clickable" onclick="location.href='dashboard.html'">
+              <td><a href="dashboard.html" class="account-link">Grace Community</a></td>
+              <td>J. Wilson</td>
+              <td>Growth</td>
+              <td>2 active</td>
+              <td class="amount">$7,275</td>
+              <td><span class="badge badge-success">&#9679; Active</span></td>
+            </tr>
+            <tr>
+              <td><a href="#" class="account-link">St. Michael's Parish</a></td>
+              <td>Fr. O'Brien</td>
+              <td>Starter</td>
+              <td>1 active</td>
+              <td class="amount">$2,499</td>
+              <td><span class="badge badge-success">&#9679; Active</span></td>
+            </tr>
+            <tr>
+              <td><a href="#" class="account-link">First Baptist</a></td>
+              <td>D. Johnson</td>
+              <td>Diocese</td>
+              <td>5 active</td>
+              <td class="amount">$31,200</td>
+              <td><span class="badge badge-success">&#9679; Active</span></td>
+            </tr>
+            <tr>
+              <td><a href="wizard.html" class="account-link">Kingdom Life Church</a></td>
+              <td>P. Harris</td>
+              <td>Growth</td>
+              <td>0 (draft)</td>
+              <td>—</td>
+              <td><span class="badge badge-warning">&#9888; Setup</span></td>
+            </tr>
+            <tr>
+              <td><a href="#" class="account-link">Resurrection Lutheran</a></td>
+              <td>M. Chen</td>
+              <td>Starter</td>
+              <td>1 completed</td>
+              <td class="amount">$4,225</td>
+              <td><span class="badge badge-success">&#9679; Active</span></td>
+            </tr>
+            <tr>
+              <td><a href="#" class="account-link">Our Lady of Peace</a></td>
+              <td>Sr. Margaret</td>
+              <td>Growth</td>
+              <td>1 setup</td>
+              <td>—</td>
+              <td><span class="badge badge-draft">Setup</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <div class="reminder-card pending-card">
+        <h3>Pending Payments</h3>
+        <p style="font-size:0.875rem; color:var(--color-error); margin-bottom:8px;">2 accounts with overdue balances</p>
+        <ul>
+          <li>St. Michael's Parish — $748.50 overdue (Week 2 print)</li>
+          <li>Kingdom Life Church — $499.00 setup fee unpaid</li>
+        </ul>
+        <button class="btn btn-outline-red full-width" style="width:100%;">Review &amp; Hold Mailings</button>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:12px;">Upsell Pipeline</h3>
+        <p style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:12px;">Grace Community — eligible for Diocese bundle upgrade</p>
+        <p style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:12px;">St. Michael's Parish — eligible for Growth plan (email + SMS)</p>
+        <button class="btn btn-outline btn-sm">Send Upgrade Offer &rarr;</button>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:12px;">This Week's Auto-Reports</h3>
+        <p style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:8px;">3 reports sending Monday 6 AM</p>
+        <ul style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:12px; padding-left:20px;">
+          <li>Grace Community — Week 2 Report</li>
+          <li>First Baptist — Week 3 Report</li>
+          <li>St. Michael's — Week 1 Report</li>
+        </ul>
+        <button class="btn btn-outline btn-sm">Preview Reports</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultant Reseller Portal — SimplyIOP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="logo">Simply<span class="logo-badge">IOP</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-icon">&#127968;</a>
+      <a href="reseller.html">My Referrals</a>
+      <a href="#">Earnings</a>
+      <a href="#">Resources</a>
+      <a href="#">Co-Branded Pages</a>
+    </nav>
+    <div class="header-actions">
+      <div class="avatar-dropdown"><div class="avatar">MR</div> &#9662;</div>
+      <a href="login.html"><button class="btn-logout">Log Out</button></a>
+    </div>
+  </div>
+</header>
+
+<!-- Hero / Apply Section -->
+<section class="split-hero" id="apply">
+  <div class="split-hero-left">
+    <a href="index.html" class="logo logo-dark">Simply<span class="logo-badge">IOP</span></a>
+    <h1 style="font-size:1.75rem; font-weight:700; margin:32px 0 16px;">Grow Your Ministry Consulting Practice</h1>
+    <p style="color:var(--color-text-muted); margin-bottom:24px; font-size:1.0625rem;">Earn 20% revenue share on every SimplyIOP campaign you bring in. You handle strategy. We handle execution.</p>
+    <a href="#dashboard" class="btn btn-primary">Apply for Reseller Access &rarr;</a>
+  </div>
+  <div class="split-hero-right">
+    <h3 style="font-size:1.25rem; margin-bottom:24px;">How It Works</h3>
+    <a href="#" class="dark-panel-item"><span><strong>1. Apply</strong> — free, approved within 24 hrs</span><span class="chevron">&rsaquo;</span></a>
+    <a href="#" class="dark-panel-item"><span><strong>2. Refer</strong> — share your unique link or co-branded page</span><span class="chevron">&rsaquo;</span></a>
+    <a href="#" class="dark-panel-item"><span><strong>3. Earn</strong> — 20% of setup fees, 5% of print, 10% of add-ons</span><span class="chevron">&rsaquo;</span></a>
+  </div>
+</section>
+
+<!-- Dashboard (post-login view) -->
+<section class="welcome-strip" id="dashboard">
+  <h1>Consultant Dashboard — Michael Reynolds</h1>
+  <p class="role-badge">Reseller Partner &mdash; Approved Jun 2025</p>
+</section>
+
+<div class="page-content">
+  <div class="two-col">
+    <div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Referred Accounts</h2>
+          <a href="#" class="card-link">Share Referral Link &rsaquo;</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>Church</th><th>Campaign Status</th><th class="right">Your Earnings</th></tr>
+          </thead>
+          <tbody>
+            <tr class="clickable" onclick="location.href='dashboard.html'">
+              <td><a href="dashboard.html" class="account-link">Grace Community</a></td>
+              <td>Active Wk 2</td>
+              <td class="amount">$199.80</td>
+            </tr>
+            <tr>
+              <td><a href="#" class="account-link">Resurrection Lutheran</a></td>
+              <td>Completed</td>
+              <td class="amount">$422.50</td>
+            </tr>
+            <tr>
+              <td><a href="wizard.html" class="account-link">Our Lady of Peace</a></td>
+              <td>Setup</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><a href="#" class="account-link">Hope Community</a></td>
+              <td>Active Wk 1</td>
+              <td class="amount">$99.80</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:12px;">Commission Structure</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><td>Setup Fee</td><td class="amount" style="color:var(--color-navy);">20%</td></tr>
+            <tr><td>Print Production</td><td class="amount" style="color:var(--color-navy);">5%</td></tr>
+            <tr><td>Add-Ons (digital, materials)</td><td class="amount" style="color:var(--color-navy);">10%</td></tr>
+            <tr><td>Multi-year renewals</td><td class="amount" style="color:var(--color-navy);">10%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <h3 style="margin-bottom:16px;">Earnings Summary — 2026</h3>
+        <div class="health-metrics" style="margin-bottom:20px;">
+          <div class="health-metric"><div class="value">$622.30</div><div class="label">Total Earned</div></div>
+          <div class="health-metric"><div class="value">$199.80</div><div class="label">Pending Payout</div></div>
+          <div class="health-metric"><div class="value">4</div><div class="label">Referrals</div></div>
+        </div>
+        <button class="btn btn-primary full-width">Request Payout &rarr;</button>
+        <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:8px; text-align:center;">Paid via Stripe Connect</p>
+      </div>
+
+      <div class="promo-card">
+        <h3>Your Co-Branded Page</h3>
+        <p>simplyiop.com/partner/michael-reynolds</p>
+        <a href="index.html">Preview Page &rarr;</a>
+      </div>
+
+      <div class="reminder-card">
+        <div class="reminder-header">
+          <div class="reminder-icon">&#128161;</div>
+          <div>
+            <h3>Referral Tip</h3>
+            <p>Churches with 500+ members on the Growth plan generate an average of $199.80 in setup commission alone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:var(--color-charcoal); color:#9ca3af; padding:24px 48px; text-align:center; font-size:0.8125rem;">
+  <p>&copy; 2026 SimplyIOP&reg;. Consultant Partner Program. &nbsp;|&nbsp; <a href="index.html" style="color:#e0e0e0;">Public Site</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

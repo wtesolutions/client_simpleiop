@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Pledge — Grace Community Church</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="pledge-wrapper">
+  <div class="pledge-card">
+    <div id="pledge-form" class="pledge-form">
+      <div class="pledge-header">
+        <a href="index.html" class="logo logo-dark" style="justify-content:center;">Simply<span class="logo-badge">IOP</span></a>
+        <div class="stripe-badge">Powered by <strong>Stripe</strong></div>
+        <h1>Grace Community Church</h1>
+        <h2>2026 Annual Stewardship Drive</h2>
+      </div>
+
+      <h3 style="font-size:1.125rem; margin-bottom:8px;">Make Your Pledge or Gift</h3>
+
+      <p style="font-size:0.875rem; color:var(--color-text-muted); margin-bottom:4px;">Suggested Amounts:</p>
+      <div class="amount-buttons">
+        <button class="amount-btn" data-amount="250">$250</button>
+        <button class="amount-btn selected" data-amount="500">$500</button>
+        <button class="amount-btn" data-amount="750">$750</button>
+        <button class="amount-btn" data-amount="custom" style="grid-column:span 1;">Other</button>
+      </div>
+      <div class="form-group" style="margin-top:8px;">
+        <label class="form-label" for="custom-amount">Amount</label>
+        <input class="form-input" type="number" id="custom-amount" value="500">
+      </div>
+
+      <p style="font-size:0.875rem; margin:12px 0 8px;">This is a:</p>
+      <div class="radio-group">
+        <label><input type="radio" name="gift-type"> Pledge (pay later)</label>
+        <label><input type="radio" name="gift-type" checked> One-time gift</label>
+        <label><input type="radio" name="gift-type"> Recurring</label>
+      </div>
+
+      <hr style="border:none; border-top:1px solid var(--color-border); margin:20px 0;">
+
+      <div class="form-row">
+        <div class="form-group"><label class="form-label" for="pledge-first">First Name</label><input class="form-input" id="pledge-first" value="John"></div>
+        <div class="form-group"><label class="form-label" for="pledge-last">Last Name</label><input class="form-input" id="pledge-last" value="Smith"></div>
+      </div>
+      <div class="form-group"><label class="form-label" for="pledge-email">Email</label><input class="form-input" id="pledge-email" type="email" value="john.smith@email.com"></div>
+      <div class="form-group"><label class="form-label" for="pledge-member">Member # (optional)</label><input class="form-input" id="pledge-member" placeholder="12345"></div>
+
+      <hr style="border:none; border-top:1px solid var(--color-border); margin:20px 0;">
+
+      <div class="payment-tabs">
+        <button class="payment-tab active">Card</button>
+        <button class="payment-tab">Bank (ACH)</button>
+      </div>
+      <div class="stripe-element"><label>Card number</label><input class="form-input" style="padding:12px;" placeholder="4242 4242 4242 4242"></div>
+      <div class="form-row">
+        <div class="stripe-element"><label>Exp</label><input class="form-input" style="padding:12px;" placeholder="MM/YY"></div>
+        <div class="stripe-element"><label>CVV</label><input class="form-input" style="padding:12px;" placeholder="123"></div>
+      </div>
+
+      <label class="form-checkbox">
+        <input type="checkbox" id="fee-coverage"> Help cover processing fees <span id="fee-label">(+$12.50)</span>
+      </label>
+
+      <div class="pledge-total-row">
+        <span class="total">Total: <span id="pledge-total">$500.00</span></span>
+        <button class="btn btn-primary" id="give-now-btn">Give Now &rarr;</button>
+      </div>
+
+      <div class="pledge-secure">
+        &#128274; Your gift is securely processed by Stripe.<br>
+        Grace Community Church is a registered 501(c)(3).
+      </div>
+      <p style="text-align:center; font-size:0.8125rem; color:var(--color-text-muted); margin-top:16px;">Tax receipt will be emailed to you automatically.</p>
+    </div>
+
+    <div id="pledge-thankyou" class="pledge-thankyou">
+      <div class="pledge-header">
+        <div style="font-size:3rem; margin-bottom:16px;">&#10003;</div>
+        <h1 style="font-size:1.75rem;">Thank You, <span id="thankyou-name">John</span>!</h1>
+        <p style="color:var(--color-text-muted); margin-top:12px;">Your pledge of <strong id="thankyou-amount">$500.00</strong> has been recorded. A tax receipt has been sent to your email.</p>
+      </div>
+      <button class="btn btn-outline full-width" style="width:100%;">Download Receipt PDF</button>
+      <p style="text-align:center; margin-top:16px;"><a href="index.html">Return to SimplyIOP</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
