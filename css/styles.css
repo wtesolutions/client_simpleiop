@@ -62,6 +62,8 @@ img { max-width: 100%; height: auto; }
 }
 .logo-dark { color: var(--color-charcoal); }
 .logo-dark .logo-badge { color: var(--color-charcoal); }
+.logo-img { display: block; height: 34px; width: auto; }
+.logo-img-lg { height: 48px; }
 
 /* ── Site Header ── */
 .site-header {
@@ -956,9 +958,265 @@ img { max-width: 100%; height: auto; }
 .pending-card ul { list-style: none; margin: 12px 0; }
 .pending-card li { padding: 4px 0; font-size: 0.875rem; color: var(--color-text-muted); }
 
+/* ── Marketing Funnel ── */
+.funnel-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.funnel-label { width: 150px; min-width: 150px; font-size: 0.875rem; font-weight: 700; text-align: right; }
+.funnel-track { flex: 1; }
+.funnel-bar {
+  height: 30px;
+  background: var(--color-navy);
+  border-radius: var(--radius);
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  min-width: 70px;
+  white-space: nowrap;
+}
+.funnel-bar.gold { background: var(--color-gold); color: var(--color-charcoal); }
+.funnel-pct { width: 80px; min-width: 80px; font-size: 0.8125rem; color: var(--color-text-muted); }
+
+/* ── Mini Production Calendar ── */
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-top: 12px; }
+.cal-dow { font-size: 0.6875rem; font-weight: 700; color: var(--color-text-muted); text-align: center; padding: 4px 0; text-transform: uppercase; }
+.cal-day {
+  min-height: 68px;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 4px 5px;
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  background: var(--color-white);
+}
+.cal-day.today { border-color: var(--color-navy); box-shadow: inset 0 0 0 1px var(--color-navy); }
+.cal-day.today .cal-date { color: var(--color-navy); font-weight: 900; }
+.cal-date { font-weight: 700; }
+.cal-event {
+  display: block;
+  margin-top: 3px;
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  background: var(--color-promo-bg);
+  color: var(--color-navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cal-event.print { background: var(--color-gold-light); color: #8a5b00; }
+.cal-event.social { background: #e8f5e9; color: var(--color-success); }
+.cal-event.lock { background: #ffebee; color: var(--color-error); }
+
+/* ── Journey / Automation Rows ── */
+.journey-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.journey-row:last-child { border-bottom: none; }
+.journey-info h4 { font-size: 0.9375rem; font-weight: 700; }
+.journey-info p { font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 2px; }
+.journey-stats { font-size: 0.8125rem; color: var(--color-navy); font-weight: 700; white-space: nowrap; }
+
+/* ── Social Accounts ── */
+.social-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.social-account:last-child { border-bottom: none; }
+.social-icon {
+  width: 40px; height: 40px; min-width: 40px;
+  border-radius: 50%;
+  background: var(--color-promo-bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.125rem;
+}
+.social-account .name { font-size: 0.9375rem; font-weight: 700; }
+.social-account .meta { font-size: 0.8125rem; color: var(--color-text-muted); }
+
+/* ── Impersonation Banner ── */
+.impersonation-banner {
+  background: var(--color-gold);
+  color: var(--color-charcoal);
+  padding: 8px 24px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: var(--header-height);
+  z-index: 99;
+}
+.impersonation-banner a { color: var(--color-charcoal); text-decoration: underline; }
+
+/* ── Audience / Serve Grid ── */
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.serve-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+  border-top: 4px solid var(--color-navy);
+  display: flex;
+  flex-direction: column;
+}
+.serve-card.gold-accent { border-top-color: var(--color-gold); }
+.serve-card .serve-icon { font-size: 2rem; margin-bottom: 12px; }
+.serve-card h3 { font-size: 1.125rem; font-weight: 700; margin-bottom: 10px; }
+.serve-card p { font-size: 0.9375rem; color: var(--color-text-muted); margin-bottom: 12px; }
+.serve-card ul { list-style: none; margin: 0 0 16px; }
+.serve-card li {
+  font-size: 0.875rem;
+  padding: 6px 0 6px 22px;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+.serve-card li::before { content: '\2713'; position: absolute; left: 0; color: var(--color-success); font-weight: 700; }
+.serve-card .serve-cta { margin-top: auto; }
+
+/* ── Case Study Cards ── */
+.case-study-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  border-left: 5px solid var(--color-gold);
+  margin-bottom: 16px;
+}
+.case-study-card .case-tag {
+  display: inline-block;
+  background: var(--color-gold-light);
+  color: var(--color-navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.case-study-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; }
+.case-study-card p { font-size: 0.9375rem; color: var(--color-text-muted); margin-bottom: 12px; }
+.case-study-card .case-results { list-style: none; margin: 12px 0 16px; }
+.case-study-card .case-results li {
+  font-size: 0.875rem;
+  padding: 6px 0 6px 24px;
+  position: relative;
+}
+.case-study-card .case-results li::before { content: '\2192'; position: absolute; left: 0; color: var(--color-gold); font-weight: 700; }
+
+/* ── Platform Chips ── */
+.platform-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+.platform-chip {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+.platform-chip.secondary { color: var(--color-text-muted); font-weight: 400; }
+
+/* ── Expertise Grid ── */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.expertise-item {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 20px;
+  text-align: center;
+}
+.expertise-item .exp-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 12px;
+  background: var(--color-gold-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.expertise-item h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.expertise-item p { font-size: 0.875rem; color: var(--color-text-muted); }
+
+/* ── Quote Cards ── */
+.quote-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+  position: relative;
+}
+.quote-card::before {
+  content: '\201C';
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--color-gold);
+  font-weight: 900;
+  display: block;
+  margin-bottom: 4px;
+  font-family: Georgia, serif;
+}
+.quote-card blockquote {
+  font-size: 0.9575rem;
+  font-style: italic;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  border: none;
+}
+.quote-card cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+.quote-card cite span { display: block; font-weight: 400; color: var(--color-text-muted); }
+
+/* ── CTA Band ── */
+.cta-band {
+  background: var(--color-navy);
+  border-radius: var(--radius);
+  padding: 40px 48px;
+  text-align: center;
+  color: var(--color-white);
+  margin: 32px 0;
+}
+.cta-band h2 { font-size: 1.75rem; font-weight: 300; margin-bottom: 8px; }
+.cta-band p { color: rgba(255,255,255,0.85); margin-bottom: 24px; font-size: 1.0625rem; }
+
 /* ── Mobile ── */
 @media (max-width: 1024px) {
   .two-col, .two-col-equal, .split-hero, .login-wrapper { grid-template-columns: 1fr; }
+  .three-col { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: repeat(2, 1fr); }
   .login-right { order: -1; }
   .page-content, .welcome-strip { padding: 24px; }
   .tab-bar { padding: 0 24px; }
@@ -985,4 +1243,9 @@ img { max-width: 100%; height: auto; }
   .form-row { grid-template-columns: 1fr; }
   .amount-buttons { grid-template-columns: repeat(2, 1fr); }
   .health-metrics { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .cta-band { padding: 32px 24px; }
+  .funnel-label { width: 90px; min-width: 90px; font-size: 0.75rem; }
+  .funnel-pct { width: 52px; min-width: 52px; }
+  .cal-day { min-height: 52px; }
 }

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Dashboard — Grace Community Church — SimpleIOP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="dashboard.html" class="logo"><img src="../images/logo-white.png" alt="SimpleIOP" class="logo-img"></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    <nav class="main-nav">
+      <a href="dashboard.html" class="nav-icon">&#127968;</a>
+      <a href="dashboard.html">Campaigns</a>
+      <a href="../wizard.html">New Campaign</a>
+      <a href="../campaign-detail.html">Active Drive</a>
+      <a href="#batches">Batch Schedule</a>
+      <a href="#lists">Lists</a>
+      <a href="#">Reports</a>
+    </nav>
+    <div class="header-actions">
+      <div class="avatar-dropdown"><div class="avatar">GC</div> &#9662;</div>
+      <a href="../login.html"><button class="btn-logout">Log Out</button></a>
+    </div>
+  </div>
+</header>
+
+<div class="impersonation-banner">
+  <span>&#128065; SuperAdmin view — you are logged in as <strong>Grace Community Church</strong>. Actions are recorded in the audit trail.</span>
+  <a href="admin.html">&larr; Return to SuperAdmin Console</a>
+</div>
+
+<section class="welcome-strip">
+  <h1>Welcome, Grace Community Church</h1>
+  <p class="role-badge">Administrator &mdash; Jennifer Wilson</p>
+  <p class="status-badge"><span class="status-dot">&#9679;</span> 2026 Annual Stewardship — Wave 2 of 5 &bull; On Schedule</p>
+</section>
+
+<div class="page-content">
+
+  <!-- Campaign progress timeline -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Campaign Progress — 2026 Annual Stewardship</h2>
+      <a href="../campaign-detail.html" class="card-link">Full Detail &rsaquo;</a>
+    </div>
+    <div class="timeline">
+      <div class="timeline-step complete">
+        <div class="step-label">Wave 1 &#10003;</div>
+        <div class="step-detail">Jul 21 &bull; 1,180 pieces sent</div>
+      </div>
+      <div class="timeline-step complete">
+        <div class="step-label">Wave 2 &#10003;</div>
+        <div class="step-detail">Jul 28 &bull; 1,145 pieces sent</div>
+      </div>
+      <div class="timeline-step current">
+        <div class="step-label">Wave 3 — In Production</div>
+        <div class="step-detail">Aug 11 &bull; 2,350 pieces</div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-label">Wave 4</div>
+        <div class="step-detail">Aug 18 &bull; scheduled</div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-label">Thank-You Wave</div>
+        <div class="step-detail">Aug 25 &bull; scheduled</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <!-- Pieces sent -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Pieces Sent to Date</h2>
+          <a href="#" class="card-link">Channel Report &rsaquo;</a>
+        </div>
+        <div class="health-metrics" style="margin-bottom:20px;">
+          <div class="health-metric"><div class="value">4,600</div><div class="label">Digital Pieces</div></div>
+          <div class="health-metric"><div class="value">1,240</div><div class="label">Physical Pieces</div></div>
+          <div class="health-metric"><div class="value">5,840</div><div class="label">Total Delivered</div></div>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>Channel</th><th class="right">Sent</th><th>Last Batch</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>&#9993; Print letters (mailed)</td><td class="amount">1,240</td><td>Jul 28 — Wave 2</td><td><span class="badge badge-success">Delivered</span></td></tr>
+            <tr><td>&#128231; Email</td><td class="amount">3,420</td><td>Jul 28 — Wave 2</td><td><span class="badge badge-success">98.4% delivered</span></td></tr>
+            <tr><td>&#128241; Text / SMS</td><td class="amount">1,156</td><td>Jul 28 — Wave 2</td><td><span class="badge badge-success">Delivered</span></td></tr>
+            <tr><td>&#128227; Social posts</td><td class="amount">24</td><td>Aug 1 — boosted</td><td><span class="badge badge-success">Live</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Next 3 batches -->
+      <div class="card" id="batches">
+        <div class="card-header">
+          <h2>Next 3 Batches Scheduled</h2>
+          <a href="#" class="card-link">Adjust Schedule &rsaquo;</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>Batch</th><th>Send Date</th><th>Channels &amp; Pieces</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Wave 3</strong></td>
+              <td>Tue, Aug 11</td>
+              <td>620 letters &bull; 1,140 emails &bull; 588 texts &bull; 2 social posts</td>
+              <td><span class="badge badge-warning">Locks Aug 8</span></td>
+            </tr>
+            <tr>
+              <td><strong>Wave 4</strong></td>
+              <td>Tue, Aug 18</td>
+              <td>560 letters &bull; 1,080 emails &bull; 545 texts</td>
+              <td><span class="badge badge-draft">Scheduled</span></td>
+            </tr>
+            <tr>
+              <td><strong>Thank-You Wave</strong></td>
+              <td>Tue, Aug 25</td>
+              <td>Respondents only — letters + emails, auto-personalized</td>
+              <td><span class="badge badge-draft">Scheduled</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px;">Families who respond are automatically suppressed from later batches — no one gets asked twice.</p>
+      </div>
+
+      <!-- QR tracking -->
+      <div class="card">
+        <div class="card-header">
+          <h2>QR Code Tracking — Print to Gift</h2>
+          <a href="#" class="card-link">Scan Detail &rsaquo;</a>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>Batch</th><th class="right">Scans</th><th class="right">Gifts</th><th class="right">Conversion</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Wave 1 letters</td><td class="amount">412</td><td class="amount">86</td><td class="amount" style="color:var(--color-success);">20.9%</td></tr>
+            <tr><td>Wave 2 letters</td><td class="amount">300</td><td class="amount">61</td><td class="amount" style="color:var(--color-success);">20.3%</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px;">Each printed piece carries a batch-unique QR code linking to your co-branded giving page <a href="#">/give/grace-stewardship-2026</a> (English + Spanish), so mailed letters are tracked to the gift just like email and text.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Pledge Totals Over Time — All Campaigns</h2>
+          <a href="#" class="card-link">&#8599; Expand</a>
+        </div>
+        <div class="table-total">
+          Total Campaign Value (all active pledges): <strong class="amount" style="float:right;">$47,200.00</strong>
+        </div>
+        <div class="chart-placeholder">Line chart — cumulative pledge growth</div>
+      </div>
+    </div>
+
+    <div>
+      <!-- List management -->
+      <div class="card" id="lists">
+        <h3 style="margin-bottom:16px;">List Management</h3>
+        <div class="health-metrics" style="margin-bottom:20px;">
+          <div class="health-metric"><div class="value">1,486</div><div class="label">Household Records</div></div>
+          <div class="health-metric"><div class="value">96%</div><div class="label">Clean &amp; Deliverable</div></div>
+          <div class="health-metric"><div class="value">212</div><div class="label">Suppressed (responded)</div></div>
+        </div>
+        <table class="data-table">
+          <tbody>
+            <tr><td>Faithful Givers</td><td class="amount">438</td></tr>
+            <tr><td>Occasional Givers</td><td class="amount">521</td></tr>
+            <tr><td>New / Young Families</td><td class="amount">312</td></tr>
+            <tr><td>Spanish-Preferred</td><td class="amount">215</td></tr>
+          </tbody>
+        </table>
+        <a href="#" class="btn btn-outline btn-sm full-width" style="display:block; margin-top:12px;">Manage Segments &rarr;</a>
+        <a href="../secure-upload.html" class="btn btn-primary full-width" style="margin-top:8px;">Upload Updated List &rarr;</a>
+      </div>
+
+      <div class="reminder-card">
+        <div class="reminder-header">
+          <div class="reminder-icon">&#9201;</div>
+          <div>
+            <h3>Wave 3 Locks Saturday</h3>
+            <p>Enter this week's responses before <strong>Aug 8, 11:59 PM</strong> so responders are suppressed from Tuesday's mailing.</p>
+            <p class="countdown" data-countdown="2026-08-08T23:59:00">5 days remaining</p>
+          </div>
+        </div>
+        <a href="../campaign-detail.html#responses" class="btn btn-primary full-width">Enter Responses Now</a>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom:12px;">My Campaigns</h3>
+        <table class="data-table">
+          <tbody>
+            <tr class="clickable" onclick="location.href='../campaign-detail.html'">
+              <td><a href="../campaign-detail.html" class="account-link">2026 Annual Stewardship</a><div class="account-sub">Wave 2 of 5 &bull; Growth</div></td>
+              <td class="amount">$34,151</td>
+            </tr>
+            <tr>
+              <td><a href="#" class="account-link">Capital Building Fund</a><div class="account-sub">Active &bull; Starter</div></td>
+              <td class="amount">$8,317</td>
+            </tr>
+            <tr>
+              <td><a href="../wizard.html" class="account-link">Youth Wing Campaign</a><div class="account-sub"><span class="badge badge-draft">draft</span></div></td>
+              <td class="amount">$4,732</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="../wizard.html" class="btn btn-outline btn-sm" style="margin-top:12px;">+ Add New Campaign</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:var(--color-charcoal); color:#9ca3af; padding:24px 48px; text-align:center; font-size:0.8125rem;">
+  <p>&copy; 2026 SimpleIOP&trade;. &nbsp;|&nbsp; <a href="admin.html" style="color:#e0e0e0;">SuperAdmin Console</a> &nbsp;|&nbsp; Powered by <a href="https://www.wte.net" target="_blank" rel="noopener" style="color:#e0e0e0; font-weight:700;">WTE SOLUTIONS</a></p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

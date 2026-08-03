@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 Annual Stewardship Drive — SimplyIOP</title>
+  <title>2026 Annual Stewardship Drive — SimpleIOP</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -11,11 +11,11 @@
 
 <header class="site-header">
   <div class="site-header-inner">
-    <a href="dashboard.html" class="logo">Simply<span class="logo-badge">IOP</span></a>
+    <a href="sadmin/dashboard.html" class="logo"><img src="images/logo-white.png" alt="SimpleIOP" class="logo-img"></a>
     <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
     <nav class="main-nav">
-      <a href="dashboard.html" class="nav-icon">&#127968;</a>
-      <a href="dashboard.html">Campaigns</a>
+      <a href="sadmin/dashboard.html" class="nav-icon">&#127968;</a>
+      <a href="sadmin/dashboard.html">Campaigns</a>
       <a href="wizard.html">New Campaign</a>
       <a href="campaign-detail.html">Active Drive</a>
       <a href="#">Reports</a>
@@ -29,72 +29,190 @@
 
 <section class="welcome-strip">
   <h1>2026 Annual Stewardship Drive</h1>
-  <span class="status-badge"><span class="status-dot">&#9679;</span> Active — Week 2 of 4</span>
+  <span class="status-badge"><span class="status-dot">&#9679;</span> Active — Wave 3 of 5 in production &bull; Print + Email + Text</span>
 </section>
 
 <nav class="tab-bar">
   <button class="tab-btn active" data-tab="overview">Overview</button>
-  <button class="tab-btn" data-tab="letters">Letters</button>
+  <button class="tab-btn" data-tab="channels">Channels</button>
+  <button class="tab-btn" data-tab="letters">Messages</button>
   <button class="tab-btn" data-tab="members">Member List</button>
   <button class="tab-btn" data-tab="responses">Responses</button>
+  <button class="tab-btn" data-tab="pledges">Pledges &amp; Payments</button>
   <button class="tab-btn" data-tab="schedule">Schedule</button>
   <button class="tab-btn" data-tab="reports">Reports</button>
-  <button class="tab-btn" data-tab="payments">Payments</button>
   <button class="tab-btn" data-tab="settings">Settings</button>
 </nav>
 
 <div class="page-content">
   <!-- Overview -->
   <div class="tab-panel active" id="tab-overview">
+    <div class="stats-bar card">
+      <div class="stat-item"><div class="stat-value">$60,000</div><div class="stat-label">Goal</div></div>
+      <div class="stat-item"><div class="stat-value">$47,200</div><div class="stat-label">Pledged (79%)</div></div>
+      <div class="stat-item"><div class="stat-value" style="color:var(--color-success);">$12,340</div><div class="stat-label">Paid on Pledges</div></div>
+      <div class="stat-item"><div class="stat-value" style="color:var(--color-error);">$34,860</div><div class="stat-label">Pledge Balance Open</div></div>
+      <div class="stat-item"><div class="stat-value">147</div><div class="stat-label">Households Pledged</div></div>
+    </div>
+
     <div class="two-col">
       <div>
         <div class="card">
-          <h2 style="margin-bottom:16px;">Week Summary</h2>
+          <h2 style="margin-bottom:16px;">Wave Summary — All Channels</h2>
           <table class="data-table">
             <thead>
-              <tr><th>Week</th><th>Mailed</th><th>Suppressed</th><th>Responded</th><th class="right">Pledged</th></tr>
+              <tr><th>Wave</th><th>&#9993; Mailed</th><th>&#128231; Emails</th><th>&#128241; Texts</th><th>Responded</th><th class="right">Pledged</th></tr>
             </thead>
             <tbody>
-              <tr><td>Week 1</td><td>847</td><td>0</td><td>61</td><td class="amount">$18,200</td></tr>
-              <tr><td>Week 2</td><td>786</td><td>61</td><td>33</td><td class="amount">$12,950</td></tr>
-              <tr><td>Week 3</td><td>753</td><td>94</td><td><em>(pending)</em></td><td>—</td></tr>
-              <tr><td>Week 4</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td><strong>Wave 1</strong> — Jul 21</td><td>620</td><td>1,140</td><td>588</td><td>86</td><td class="amount">$18,200</td></tr>
+              <tr><td><strong>Wave 2</strong> — Jul 28</td><td>560</td><td>1,080</td><td>545</td><td>61</td><td class="amount">$12,950</td></tr>
+              <tr><td><strong>Wave 3</strong> — Aug 11</td><td>620 queued</td><td>1,140 queued</td><td>588 queued</td><td><em>(pending)</em></td><td>—</td></tr>
+              <tr><td><strong>Wave 4</strong> — Aug 18</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td><strong>Thank-You</strong> — Aug 25</td><td colspan="3">Respondents only, auto-personalized</td><td>—</td><td>—</td></tr>
             </tbody>
           </table>
-          <div class="chart-placeholder">Bar chart — cumulative pledge growth by week</div>
+          <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px;">Households who respond on any channel are suppressed from every later wave — mail, email, and text.</p>
+          <div class="chart-placeholder">Bar chart — cumulative pledges by wave, split by channel</div>
         </div>
       </div>
       <div>
         <div class="reminder-card urgent">
-          <h3>Monday 11:59 PM Deadline</h3>
-          <p>Enter this week's responses before Tuesday mailing.</p>
-          <p class="countdown" data-countdown="2026-06-30T23:59:00">31 hours 14 minutes remaining</p>
+          <h3>Wave 3 Locks Saturday</h3>
+          <p>Enter responses before <strong>Aug 8, 11:59 PM</strong> so responders are pulled from Tuesday's mail, email, and text sends.</p>
+          <p class="countdown" data-countdown="2026-08-08T23:59:00">5 days remaining</p>
           <a href="#" class="btn btn-primary full-width" style="margin-top:12px;" onclick="document.querySelector('[data-tab=responses]').click(); return false;">Enter Responses</a>
         </div>
         <div class="card">
           <h3 style="margin-bottom:16px;">Campaign Health</h3>
           <div class="health-metrics">
-            <div class="health-metric"><div class="value">5.1%</div><div class="label">Response Rate</div></div>
-            <div class="health-metric"><div class="value">78%</div><div class="label">Goal Progress</div></div>
-            <div class="health-metric"><div class="value">753</div><div class="label">Letters Queued</div></div>
+            <div class="health-metric"><div class="value">6.3%</div><div class="label">Response Rate</div></div>
+            <div class="health-metric"><div class="value">79%</div><div class="label">Goal Pledged</div></div>
+            <div class="health-metric"><div class="value">26%</div><div class="label">Pledges Paid</div></div>
           </div>
-          <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px; text-align:center;">Goal: $60,000 &bull; Pledged: $47,200</p>
+          <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px; text-align:center;">Pledge payments arrive over the year — reminder journeys keep them on track.</p>
+        </div>
+        <div class="promo-card">
+          <h3>QR Print Tracking</h3>
+          <p>712 scans from mailed letters &bull; 20.6% scan-to-pledge conversion.</p>
+          <a href="#" onclick="document.querySelector('[data-tab=channels]').click(); return false;">Channel Detail &rarr;</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Letters -->
+  <!-- Channels -->
+  <div class="tab-panel" id="tab-channels">
+    <div class="card">
+      <h2 style="margin-bottom:16px;">Channel Performance — Waves 1 &amp; 2</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th class="right">Sent</th>
+            <th class="right">Delivered</th>
+            <th class="right">Opened / Scanned</th>
+            <th class="right">Pledges</th>
+            <th class="right">Pledged $</th>
+            <th class="right">Cost / $ Raised</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&#9993; <strong>Mailers (print)</strong></td>
+            <td class="amount">1,180</td>
+            <td class="amount">1,168</td>
+            <td class="amount">712 QR scans</td>
+            <td class="amount">48</td>
+            <td class="amount">$21,600</td>
+            <td class="amount">$0.062</td>
+          </tr>
+          <tr>
+            <td>&#128231; <strong>Email</strong></td>
+            <td class="amount">2,220</td>
+            <td class="amount">2,174 (97.9%)</td>
+            <td class="amount">853 (39.2%)</td>
+            <td class="amount">58</td>
+            <td class="amount">$14,400</td>
+            <td class="amount">$0.004</td>
+          </tr>
+          <tr>
+            <td>&#128241; <strong>Text / SMS</strong></td>
+            <td class="amount">1,133</td>
+            <td class="amount">1,121 (98.9%)</td>
+            <td class="amount">246 clicks (21.9%)</td>
+            <td class="amount">29</td>
+            <td class="amount">$7,400</td>
+            <td class="amount">$0.009</td>
+          </tr>
+          <tr>
+            <td>&#128222; Phone / in-person</td>
+            <td class="amount">—</td>
+            <td class="amount">—</td>
+            <td class="amount">—</td>
+            <td class="amount">12</td>
+            <td class="amount">$3,800</td>
+            <td class="amount">—</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px;">Attribution: a pledge counts toward the channel of its last touch — QR scan for mail, tracked link for email and text. Multi-touch view available in Reports.</p>
+    </div>
+
+    <div class="two-col-equal">
+      <div class="card">
+        <h3 style="margin-bottom:12px;">Best Send Windows (This List)</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><td>&#128231; Email</td><td>Tue 9–11 AM &bull; 44% open</td></tr>
+            <tr><td>&#128241; Text</td><td>Sun 12–2 PM (post-service) &bull; 31% click</td></tr>
+            <tr><td>&#9993; Mail arrival</td><td>Thu–Fri &bull; highest weekend QR scans</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:12px;">Deliverability &amp; Compliance</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><td>Email bounces cleaned</td><td class="amount">46</td></tr>
+            <tr><td>SMS opt-outs (auto-honored)</td><td class="amount">9</td></tr>
+            <tr><td>Bad addresses → NCOA queue</td><td class="amount">12</td></tr>
+            <tr><td>Quiet hours enforced</td><td class="amount" style="color:var(--color-success);">&#10003; 9pm–9am</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Messages (letters + email + sms) -->
   <div class="tab-panel" id="tab-letters">
     <div class="card">
-      <h2 style="margin-bottom:16px;">Letter Previews — Group &times; Week</h2>
+      <h2 style="margin-bottom:16px;">Message Previews — Group &times; Wave &times; Channel</h2>
       <div class="letter-grid">
-        <div class="letter-thumb"><div class="letter-preview-box">Week 1</div><div class="letter-thumb-label">Major — Wk 1</div></div>
-        <div class="letter-thumb"><div class="letter-preview-box">Week 2</div><div class="letter-thumb-label">Major — Wk 2</div></div>
-        <div class="letter-thumb"><div class="letter-preview-box">Week 1</div><div class="letter-thumb-label">Regular — Wk 1</div></div>
-        <div class="letter-thumb"><div class="letter-preview-box">Week 2</div><div class="letter-thumb-label">Regular — Wk 2</div></div>
-        <div class="letter-thumb"><div class="letter-preview-box">Week 1</div><div class="letter-thumb-label">Lapsed — Wk 1</div></div>
-        <div class="letter-thumb"><div class="letter-preview-box">Week 3</div><div class="letter-thumb-label">Regular — Wk 3</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">&#9993; Letter</div><div class="letter-thumb-label">Major — Wave 1</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">&#9993; Letter</div><div class="letter-thumb-label">Regular — Wave 2</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">&#9993; Letter</div><div class="letter-thumb-label">Lapsed — Wave 1</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">&#128231; Email</div><div class="letter-thumb-label">Announce — Wave 1</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">&#128231; Email</div><div class="letter-thumb-label">Follow-Up — Wave 2</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">&#128241; SMS</div><div class="letter-thumb-label">Nudge — Wave 2</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">&#128241; SMS</div><div class="letter-thumb-label">Reminder — Wave 3</div></div>
+        <div class="letter-thumb"><div class="letter-preview-box">&#9993; Letter</div><div class="letter-thumb-label">Thank-You + Receipt</div></div>
+      </div>
+    </div>
+
+    <div class="two-col-equal">
+      <div class="card">
+        <h3 style="margin-bottom:12px;">&#128241; SMS Preview — Wave 3 Reminder</h3>
+        <div style="background:var(--color-bg-light); border-radius:12px; padding:16px 20px; font-size:0.9375rem; max-width:340px;">
+          Grace Community: Hi {{first_name}}! We're 79% of the way to our 2026 Stewardship goal &#128591; Make or complete your pledge in 30 seconds: {{giving_link}} &mdash; Reply STOP to opt out.
+        </div>
+        <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px;">147 chars &bull; sent from your dedicated number &bull; Spanish version auto-sent to Spanish-preferred households.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:12px;">&#128231; Email Preview — Wave 2 Follow-Up</h3>
+        <p style="font-size:0.875rem; margin-bottom:4px;"><strong>Subject (A/B winner):</strong> "Your family's part in our story" — 44.1% open</p>
+        <div style="background:var(--color-bg-light); border-radius:4px; padding:16px 20px; font-size:0.875rem; line-height:1.7;">
+          Dear {{first_name}}, thank you for being part of Grace Community. Families like yours have already pledged <strong>{{campaign_goal_pct}}</strong> of our goal. Your suggested pledge of <strong>{{suggested_ask}}</strong> can be given weekly, monthly, or once — <a href="pledge.html">choose what works for your family &rarr;</a>
+        </div>
       </div>
     </div>
   </div>
@@ -104,22 +222,49 @@
     <div class="card">
       <div class="filter-bar">
         <input type="search" placeholder="Search members...">
-        <select><option>All Groups</option><option>Major Donors</option><option>Regular Donors</option><option>Excused / Lapsed</option></select>
+        <select><option>All Groups</option><option>Major Donors</option><option>Regular Donors</option><option>New / Young Families</option><option>Excused / Lapsed</option></select>
         <select><option>Responded: All</option><option>Yes</option><option>No</option></select>
+        <select><option>Pledge Status: All</option><option>Paid in Full</option><option>Partially Paid</option><option>Unpaid</option></select>
       </div>
       <table class="data-table">
         <thead>
-          <tr><th>Name</th><th>Group</th><th>Email</th><th>Last Gift</th><th class="right">Pledge $</th><th>Responded</th><th>Suppress</th></tr>
+          <tr><th>Name</th><th>Group</th><th>Channels</th><th class="right">Pledged</th><th class="right">Paid</th><th class="right">Balance</th><th>Status</th></tr>
         </thead>
         <tbody>
-          <tr><td>Smith, John</td><td>Major</td><td>j@email.com</td><td>$2,400</td><td class="amount">$2,760</td><td><span class="badge badge-success">&#10003;</span></td><td>—</td></tr>
-          <tr><td>Jones, Mary</td><td>Regular</td><td>m@email.com</td><td>$480</td><td class="amount">$552</td><td>—</td><td><input type="checkbox"></td></tr>
-          <tr><td>Williams, Robert</td><td>Major</td><td>r@email.com</td><td>$3,100</td><td class="amount">$3,565</td><td><span class="badge badge-success">&#10003;</span></td><td>—</td></tr>
-          <tr><td>Davis, Susan</td><td>Regular</td><td>s@email.com</td><td>$220</td><td>—</td><td>—</td><td>—</td></tr>
-          <tr><td>Miller, James</td><td>Lapsed</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+          <tr>
+            <td>Smith, John</td><td>Major</td><td>&#9993; &#128231; &#128241;</td>
+            <td class="amount">$2,760</td><td class="amount">$2,760</td><td class="amount">$0</td>
+            <td><span class="badge badge-success">Paid in Full</span></td>
+          </tr>
+          <tr>
+            <td>Williams, Robert</td><td>Major</td><td>&#9993; &#128231;</td>
+            <td class="amount">$3,000</td><td class="amount">$500</td><td class="amount" style="color:var(--color-error);">$2,500</td>
+            <td><span class="badge badge-warning">Partially Paid — 17%</span></td>
+          </tr>
+          <tr>
+            <td>Anderson, Karen</td><td>Major</td><td>&#9993; &#128241;</td>
+            <td class="amount">$1,840</td><td class="amount">$920</td><td class="amount" style="color:var(--color-error);">$920</td>
+            <td><span class="badge badge-warning">Monthly — on track</span></td>
+          </tr>
+          <tr>
+            <td>Jones, Mary</td><td>Regular</td><td>&#128231; &#128241;</td>
+            <td class="amount">$552</td><td class="amount">$0</td><td class="amount" style="color:var(--color-error);">$552</td>
+            <td><span class="badge badge-error">Unpaid — reminder Aug 15</span></td>
+          </tr>
+          <tr>
+            <td>Davis, Susan</td><td>Regular</td><td>&#9993; &#128231;</td>
+            <td>—</td><td>—</td><td>—</td>
+            <td><span class="badge badge-draft">No response yet</span></td>
+          </tr>
+          <tr>
+            <td>Miller, James</td><td>Lapsed</td><td>&#9993;</td>
+            <td>—</td><td>—</td><td>—</td>
+            <td><span class="badge badge-draft">Mail only — no email/phone</span></td>
+          </tr>
         </tbody>
       </table>
-      <button class="btn btn-outline btn-sm" style="margin-top:16px;">Export CSV</button>
+      <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px;">Channel icons show how each household is reachable: &#9993; mail &bull; &#128231; email &bull; &#128241; text. Ask amounts and language are personalized per household.</p>
+      <button class="btn btn-outline btn-sm" style="margin-top:8px;">Export CSV</button>
       <div class="upsell-row">&#128241; Add Mobile Scanner App — log mailed pledge cards with your phone. $99. <a href="#" class="add-now-btn" data-addon="scanner">Add Now &rarr;</a></div>
     </div>
   </div>
@@ -127,18 +272,125 @@
   <!-- Responses -->
   <div class="tab-panel" id="tab-responses">
     <div class="card">
-      <p style="margin-bottom:16px;"><span class="badge badge-success">14 online pledges — $6,840 processed via pledge link</span></p>
+      <p style="margin-bottom:16px;">
+        <span class="badge badge-success">147 pledges — $47,200 total</span>&nbsp;
+        <span class="badge badge-draft">48 via QR from mail</span>&nbsp;
+        <span class="badge badge-draft">58 via email link</span>&nbsp;
+        <span class="badge badge-draft">29 via text link</span>&nbsp;
+        <span class="badge badge-draft">12 phone / in person</span>
+      </p>
       <table class="data-table">
         <thead><tr><th>Date</th><th>Member</th><th>Group</th><th class="right">Pledge $</th><th>Channel</th></tr></thead>
         <tbody>
-          <tr><td>Jun 15, 2026</td><td>Smith, John</td><td>Major</td><td class="amount">$2,760</td><td>Online</td></tr>
-          <tr><td>Jun 14, 2026</td><td>Williams, Robert</td><td>Major</td><td class="amount">$3,565</td><td>Mail</td></tr>
-          <tr><td>Jun 13, 2026</td><td>Brown, Linda</td><td>Regular</td><td class="amount">$575</td><td>Online</td></tr>
-          <tr><td>Jun 12, 2026</td><td>Taylor, David</td><td>Regular</td><td class="amount">$460</td><td>Phone</td></tr>
-          <tr><td>Jun 10, 2026</td><td>Anderson, Karen</td><td>Major</td><td class="amount">$1,840</td><td>Check</td></tr>
+          <tr><td>Aug 2, 2026</td><td>Smith, John</td><td>Major</td><td class="amount">$2,760</td><td>&#128231; Email link</td></tr>
+          <tr><td>Aug 1, 2026</td><td>Williams, Robert</td><td>Major</td><td class="amount">$3,000</td><td>&#9993; QR scan (Wave 2 letter)</td></tr>
+          <tr><td>Jul 31, 2026</td><td>Brown, Linda</td><td>Regular</td><td class="amount">$575</td><td>&#128241; Text link</td></tr>
+          <tr><td>Jul 30, 2026</td><td>Taylor, David</td><td>Regular</td><td class="amount">$460</td><td>&#128222; Phone</td></tr>
+          <tr><td>Jul 29, 2026</td><td>Anderson, Karen</td><td>Major</td><td class="amount">$1,840</td><td>&#9993; Mailed pledge card</td></tr>
         </tbody>
       </table>
       <button class="btn btn-primary btn-sm" style="margin-top:16px;">+ Log Manual Response</button>
+    </div>
+  </div>
+
+  <!-- Pledges & Payments -->
+  <div class="tab-panel" id="tab-pledges">
+    <div class="card">
+      <h2 style="margin-bottom:16px;">Pledge Fulfillment — Promised vs. Paid</h2>
+      <div class="funnel-row">
+        <div class="funnel-label">Pledged</div>
+        <div class="funnel-track"><div class="funnel-bar" style="width:100%;">$47,200</div></div>
+        <div class="funnel-pct">147 households</div>
+      </div>
+      <div class="funnel-row">
+        <div class="funnel-label">Paid to Date</div>
+        <div class="funnel-track"><div class="funnel-bar gold" style="width:26%;">$12,340</div></div>
+        <div class="funnel-pct">26.1%</div>
+      </div>
+      <p style="font-size:0.875rem; color:var(--color-text-muted); margin:12px 0 20px;">Outstanding balance: <strong style="color:var(--color-error);">$34,860</strong> — automatic reminders go out at 30 / 60 / 90 days by the household's preferred channel.</p>
+
+      <h3 style="margin-bottom:12px;">Fulfillment by Donor Group</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th class="right">Sent To</th>
+            <th class="right">Pledged</th>
+            <th class="right">Paid</th>
+            <th class="right">Balance</th>
+            <th>Fulfillment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Major Donors</strong></td>
+            <td class="amount">200</td>
+            <td class="amount">$28,400</td>
+            <td class="amount">$8,120</td>
+            <td class="amount" style="color:var(--color-error);">$20,280</td>
+            <td><span class="badge badge-warning">29% paid</span></td>
+          </tr>
+          <tr>
+            <td><strong>Regular Donors</strong></td>
+            <td class="amount">521</td>
+            <td class="amount">$14,300</td>
+            <td class="amount">$3,540</td>
+            <td class="amount" style="color:var(--color-error);">$10,760</td>
+            <td><span class="badge badge-warning">25% paid</span></td>
+          </tr>
+          <tr>
+            <td><strong>New / Young Families</strong></td>
+            <td class="amount">312</td>
+            <td class="amount">$3,000</td>
+            <td class="amount">$500</td>
+            <td class="amount" style="color:var(--color-error);">$2,500</td>
+            <td><span class="badge badge-error">17% paid — nudge queued</span></td>
+          </tr>
+          <tr>
+            <td><strong>Lapsed / Win-Back</strong></td>
+            <td class="amount">147</td>
+            <td class="amount">$1,500</td>
+            <td class="amount">$180</td>
+            <td class="amount" style="color:var(--color-error);">$1,320</td>
+            <td><span class="badge badge-error">12% paid</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px;">Example read: we sent to <strong>200 Major Donor households</strong>; those who pledged promised $28,400 but have paid $8,120 so far. Pledges are commitments — the reminder journeys turn them into cash over the giving year.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="card">
+          <h3 style="margin-bottom:12px;">Largest Open Balances</h3>
+          <table class="data-table">
+            <thead><tr><th>Member</th><th class="right">Pledged</th><th class="right">Paid</th><th class="right">Balance</th><th>Next Reminder</th></tr></thead>
+            <tbody>
+              <tr><td>Williams, Robert</td><td class="amount">$3,000</td><td class="amount">$500</td><td class="amount" style="color:var(--color-error);">$2,500</td><td>&#128231; Aug 30 (60-day)</td></tr>
+              <tr><td>Chen, Patricia</td><td class="amount">$2,400</td><td class="amount">$600</td><td class="amount" style="color:var(--color-error);">$1,800</td><td>&#9993; Sep 12 (90-day letter)</td></tr>
+              <tr><td>Garcia, Miguel</td><td class="amount">$1,200</td><td class="amount">$300</td><td class="amount" style="color:var(--color-error);">$900</td><td>&#128241; Aug 15 (30-day, ES)</td></tr>
+              <tr><td>Jones, Mary</td><td class="amount">$552</td><td class="amount">$0</td><td class="amount" style="color:var(--color-error);">$552</td><td>&#128241; Aug 15 (30-day)</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.8125rem; color:var(--color-text-muted); margin-top:12px;">Reminders use each household's best channel and language, and stop automatically when the pledge is paid or adjusted.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3 style="margin-bottom:12px;">Platform Invoices</h3>
+          <table class="data-table">
+            <thead><tr><th>Invoice</th><th class="right">Amount</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Setup Fee (50% upfront)<div class="account-sub">Jul 1, 2026</div></td><td class="amount">$3,637.50</td><td><span class="badge badge-success">Paid &#10003;</span></td></tr>
+              <tr><td>Wave 1 Print + SMS<div class="account-sub">Jul 21, 2026</div></td><td class="amount">$1,482.25</td><td><span class="badge badge-success">Paid &#10003;</span></td></tr>
+              <tr><td>Wave 2 Print + SMS<div class="account-sub">Jul 28, 2026</div></td><td class="amount">$1,375.50</td><td><span class="badge badge-warning">Due Aug 12</span></td></tr>
+            </tbody>
+          </table>
+          <p style="margin:16px 0 12px; font-size:0.9375rem;"><strong>Online payments (Stripe):</strong> $12,340 collected on pledges — fees $308.50</p>
+          <a href="pledge.html" class="btn btn-outline btn-sm" style="margin-right:8px;">View Pledge Page</a>
+          <button class="btn btn-primary btn-sm">Pay Remaining Balance</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -146,12 +398,13 @@
   <div class="tab-panel" id="tab-schedule">
     <div class="card">
       <div class="timeline">
-        <div class="timeline-step complete"><div class="step-label">Week 1 &#10003;</div><div class="step-detail">847 mailed<br>Sent to printer &#10003;</div></div>
-        <div class="timeline-step complete"><div class="step-label">Week 2 &#10003;</div><div class="step-detail">786 mailed<br>Sent to printer &#10003;</div></div>
-        <div class="timeline-step current"><div class="step-label">Week 3 (current)</div><div class="step-detail">753 queued<br>Print pending</div></div>
-        <div class="timeline-step"><div class="step-label">Week 4</div><div class="step-detail">Scheduled Jul 6</div></div>
-        <div class="timeline-step"><div class="step-label">Thank-You</div><div class="step-detail">Auto after close</div></div>
+        <div class="timeline-step complete"><div class="step-label">Wave 1 &#10003;</div><div class="step-detail">Jul 21 &bull; 620 mail<br>1,140 email &bull; 588 text</div></div>
+        <div class="timeline-step complete"><div class="step-label">Wave 2 &#10003;</div><div class="step-detail">Jul 28 &bull; 560 mail<br>1,080 email &bull; 545 text</div></div>
+        <div class="timeline-step current"><div class="step-label">Wave 3 (current)</div><div class="step-detail">Aug 11 &bull; locks Aug 8<br>620 mail &bull; 1,140 email &bull; 588 text</div></div>
+        <div class="timeline-step"><div class="step-label">Wave 4</div><div class="step-detail">Aug 18 &bull; 560 mail<br>1,080 email &bull; 545 text</div></div>
+        <div class="timeline-step"><div class="step-label">Thank-You</div><div class="step-detail">Aug 25 &bull; respondents only<br>letter + email</div></div>
       </div>
+      <p style="font-size:0.8125rem; color:var(--color-text-muted);">Each wave locks 72 hours before send: responders are suppressed across all channels, print files go to production, and email/text queues are finalized together.</p>
     </div>
   </div>
 
@@ -159,27 +412,11 @@
   <div class="tab-panel" id="tab-reports">
     <div class="card">
       <h2 style="margin-bottom:16px;">Campaign Reports</h2>
-      <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Download Week 1 Report PDF</a></p>
-      <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Download Week 2 Report PDF</a></p>
+      <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Wave 1 Report PDF — all channels</a></p>
+      <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Wave 2 Report PDF — all channels</a></p>
+      <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Pledge Fulfillment Report (promised vs. paid)</a></p>
       <p style="margin-bottom:12px;"><a href="#" class="btn btn-outline btn-sm">Export Full Member List CSV</a></p>
-      <p style="color:var(--color-text-muted); font-size:0.875rem; margin-top:20px;">Final Report: Available at campaign completion (Week 4 + 7 days)</p>
-    </div>
-  </div>
-
-  <!-- Payments -->
-  <div class="tab-panel" id="tab-payments">
-    <div class="card">
-      <table class="data-table">
-        <thead><tr><th>Invoice</th><th>Date</th><th class="right">Amount</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td>Setup Fee (50% upfront)</td><td>Jun 1, 2026</td><td class="amount">$3,637.50</td><td><span class="badge badge-success">Paid &#10003;</span></td></tr>
-          <tr><td>Week 1 Print Production</td><td>Jun 8, 2026</td><td class="amount">$1,482.25</td><td><span class="badge badge-success">Paid &#10003;</span></td></tr>
-          <tr><td>Week 2 Print Production</td><td>Jun 15, 2026</td><td class="amount">$1,375.50</td><td><span class="badge badge-warning">Due Jul 1</span></td></tr>
-        </tbody>
-      </table>
-      <p style="margin:20px 0 12px; font-size:0.9375rem;"><strong>Online Donations (Stripe):</strong> $6,840 processed — $171.00 platform fee collected</p>
-      <a href="pledge.html" class="btn btn-outline btn-sm" style="margin-right:8px;">View Pledge Page</a>
-      <button class="btn btn-primary btn-sm">Pay Remaining Balance</button>
+      <p style="color:var(--color-text-muted); font-size:0.875rem; margin-top:20px;">Final Report: available at campaign completion (Thank-You Wave + 7 days), including channel attribution and 12-month pledge payment projections.</p>
     </div>
   </div>
 
@@ -189,8 +426,13 @@
       <h2 style="margin-bottom:16px;">Campaign Settings</h2>
       <div class="form-group"><label class="form-label">Campaign Name</label><input class="form-input" value="2026 Annual Stewardship Drive"></div>
       <div class="form-group"><label class="form-label">Goal Amount</label><input class="form-input" value="$60,000"></div>
-      <div class="form-group"><label class="form-label">Pledge Link</label><input class="form-input" value="https://simplyiop.com/pledge/grace-community-2026" readonly></div>
-      <button class="btn btn-primary btn-sm">Save Changes</button>
+      <div class="form-group"><label class="form-label">Pledge Link (co-branded)</label><input class="form-input" value="https://simpleiop.wte.net/give/grace-stewardship-2026" readonly></div>
+      <div class="toggle-row"><span>&#9993; Print / mailers</span><div class="toggle-switch on"></div></div>
+      <div class="toggle-row"><span>&#128231; Email</span><div class="toggle-switch on"></div></div>
+      <div class="toggle-row"><span>&#128241; Text / SMS</span><div class="toggle-switch on"></div></div>
+      <div class="toggle-row"><span>Pledge reminder journey (30/60/90-day)</span><div class="toggle-switch on"></div></div>
+      <div class="toggle-row"><span>Spanish-language variants</span><div class="toggle-switch on"></div></div>
+      <button class="btn btn-primary btn-sm" style="margin-top:16px;">Save Changes</button>
     </div>
   </div>
 </div>
@@ -207,11 +449,11 @@
 <div class="modal-overlay" id="letter-modal">
   <div class="modal" style="max-width:640px;">
     <button class="modal-close">&times;</button>
-    <h2 id="letter-modal-title">Letter Preview</h2>
+    <h2 id="letter-modal-title">Message Preview</h2>
     <div style="background:var(--color-bg-light); padding:24px; border-radius:4px; font-size:0.9375rem; line-height:1.8; margin-top:16px;">
       <p>Dear Mr. Smith,</p>
       <p>As a faithful steward of Grace Community Church, your generosity of $2,400 last year made a lasting impact. This year, we invite you to consider a pledge of $2,760 to support our 2026 Annual Stewardship Drive.</p>
-      <p>Make your pledge online: <a href="pledge.html">simplyiop.com/pledge/grace-community</a></p>
+      <p>Scan the QR code on this letter, or pledge online: <a href="pledge.html">simpleiop.wte.net/give/grace-stewardship-2026</a></p>
       <p>With gratitude,<br>Rev. Michael Thompson</p>
     </div>
   </div>
