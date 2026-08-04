@@ -1,4 +1,4 @@
-/* SimpleIOP Mockup — Interactive behaviors */
+/* SimplyIOP Mockup — Interactive behaviors */
 
 document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
